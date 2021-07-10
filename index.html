@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://10.92.190.36/nwzk/webgisapi/webgisapi.index.js"></script>
+    <script type="module" src="./src/main.ts"></script>
+  </head>
+  <body>
+    <div id="map" style="width: 100vw; height: 100vh"></div>
+    <script>
+      var map = new WebGIS.Map({
+        container: 'map',
+        style: 'webgis://styles/normal',
+        center: [113.23, 23.16],
+        zoom: 9,
+        controls: [{ name: 'scale', position: 'bottom-left' }],
+      })
+      map.on('load', (e) => {})
+    </script>
+    <script src="plugins/plugin1.js"></script>
+    <script src="plugins/plugin2.js"></script>
+  </body>
+</html>
